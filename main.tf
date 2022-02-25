@@ -1,5 +1,8 @@
 provider "aws" {
-  region = var.region
+  version = "2.47.0"
+  region  = var.aws_region
+  profile = var.aws_profile
+  shared_credentials_file = "~/.aws/credentials"
 }
 
 data "aws_ami" "ubuntu" {
